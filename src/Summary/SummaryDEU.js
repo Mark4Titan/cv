@@ -7,17 +7,18 @@ import { projects } from "./linkProjects";
 
 export const Resume = {
   language: "DEU",
+  fullName: { name: "Vasyl ", surname: "Andreychuk" },
+  avatar,
+  social: social,
+  
   about: {
     title: "Über mich",
-    avatar,
 
-    fullName: { name: "Vasyl ", surname: "Andreychuk" },
     address: "Ukraine · Chmelnyzkyj",
     phone: aboutContent.phone,
     mail: aboutContent.mail,
     aboutMe:
       "Ich habe Erfahrung in der Verwendung flexibler Frameworks, um eine robuste Synopse für Interaktionen auf hoher Ebene bereitzustellen.",
-    social: social,
   },
 
   experience: {

@@ -7,17 +7,17 @@ import { projects } from "./linkProjects";
 
 export const Resume = {
   language: "UA",
+  fullName: { name: "Василь ", surname: "Андрейчук" },
+  avatar,
+  social: social,
+  
   about: {
     title: "Про мене",
-    avatar,
-
-    fullName: { name: "Василь ", surname: "Андрейчук" },
     address: "Україна · м. Хмельницький",
     phone: aboutContent.phone,
     mail: aboutContent.mail,
     aboutMe:
       "Я маю досвід використання гнучких фреймворків, щоб забезпечити надійний синопсис для ваємодії на високому рівні.",
-    social: social,
   },
 
   experience: {

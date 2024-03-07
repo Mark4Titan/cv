@@ -1,59 +1,64 @@
-
-interface Experience {
+export interface Experience {
   position: string;
   period: string;
   company: string;
   content: string;
 }
 
-interface Education {
+export interface Education {
   institution: string;
   period: string;
   received: string;
   faculty: string;
 }
 
-interface Skills {
+export interface Skills {
   title: string;
   tools: string[];
   workflow: string[];
 }
 
-interface Interests {
+export interface Interests {
   title: string;
   content: string[];
 }
 
-interface Project {
+export interface Project {
   project: string;
   link: string;
   comit: string;
 }
 
-interface Awards {
+export interface Awards {
   title: string;
   expansion: string;
   content: string[];
 }
 
-interface Social {
+export interface Social {
   linkedIn: string;
   github: string;
   telegram: string;
   youtube: string;
 }
-
+export interface FullName {
+  name: string;
+  surname: string;
+}
+export interface About {
+  title: string;
+  address: string;
+  phone: string;
+  mail: string;
+  aboutMe: string;
+}
 interface CV {
   language: string;
-  about: {
-    title: string;
-    fullName: { name: string; surname: string };
-    address: string;
-    phone: string;
-    mail: string;
-    aboutMe: string;
-    social: Social;
-  };
+  avatar: string;
+  fullName: FullName;
+  about: About;
+  social: Social;
+
   experience: {
     title: string;
     content: Experience[];
@@ -63,7 +68,9 @@ interface CV {
     content: Education[];
   };
   skills: Skills;
+
   interests: Interests;
+  
   projects: {
     title: string;
     content: Project[];

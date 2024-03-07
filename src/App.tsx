@@ -11,15 +11,19 @@ import {
 } from "@mui/material";
 import { useReactToPrint } from "react-to-print";
 import GlobalState from "./GlobalState/GlobalState";
-import CastomSelect, { SelectCB, itemsArr } from "./element/SelectText/CastomSelect";
+import CastomSelect, {
+  SelectCB,
+  itemsArr,
+} from "./element/SelectText/CastomSelect";
 import Header from "./components/header/Header";
 import { LanguageNext } from "./GlobalState/SliseGlobalState";
+import Content from "./components/header/content/Content";
 
 function App() {
   const printRef = useRef<HTMLDivElement>(null);
   const theme = useTheme();
   const language = GlobalState((s) => s.language);
-  console.log("language", language);
+  // console.log("language", language);
 
   const newTheme = createTheme(theme, {
     typography: {
@@ -58,10 +62,11 @@ function App() {
     itemId: le.max,
     avatar: le.logo,
   }));
+
   const NextSelect = (selectCB: SelectCB) => {
     LanguageNext(selectCB.label, selectCB.itemId);
   };
-  
+
   return (
     <ThemeProvider theme={newTheme}>
       <Box className='App'>
@@ -97,7 +102,7 @@ function App() {
                 pr: 1,
                 boxShadow: newTheme.shadows[24],
               }}>
-              content
+              <Content title='title' playList={{ v: "About", c: {} }} />
             </Paper>
           </Container>
         </Box>
